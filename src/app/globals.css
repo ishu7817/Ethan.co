@@ -11,8 +11,23 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
+@keyframes matrixJitter {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  12.5% { transform: translate3d(-8px, 0, 0); }
+  25% { transform: translate3d(12px, 0, 0); }
+  37.5% { transform: translate3d(-15px, 0, 0); }
+  50% { transform: translate3d(6px, 0, 0); }
+  62.5% { transform: translate3d(-10px, 0, 0); }
+  75% { transform: translate3d(18px, 0, 0); }
+  87.5% { transform: translate3d(-4px, 0, 0); }
+}
 
-@media (prefers-color-scheme: dark) {
+.animate-matrix-jitter {
+  /* steps(1) skips smooth interpolation so the noise instantly snaps/glitches */
+  animation: matrixJitter 0.3s steps(1) infinite;
+}@media (prefers-color-scheme: dark) {
+
+
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
