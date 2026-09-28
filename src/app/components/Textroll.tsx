@@ -32,7 +32,7 @@ export function TextRoll({
               initial: { y: "0%" },
               hover: { y: "-100%" },
             }}
-            transition={{ ...transition, delay: index * stagger }}
+            transition={{ delay: index * stagger }}
             className="inline-block"
           >
             {char === " " ? "\u00A0" : char}
@@ -49,7 +49,7 @@ export function TextRoll({
               initial: { y: "100%" },
               hover: { y: "0%" },
             }}
-            transition={{ ...transition, delay: index * stagger }}
+            transition={{ delay: index * stagger }}
             className="inline-block"
           >
             {char === " " ? "\u00A0" : char}

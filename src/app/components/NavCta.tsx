@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Phone } from "lucide-react";
 import { motion } from "framer-motion";
 
 const childVariants = {
@@ -10,7 +11,8 @@ const childVariants = {
 
 const chidVariants = {
   initial: { y: "0", opacity: 1 },
-  hover: { y: "-100%", opacity: 0 },
+  hover: { y: "100%", opacity: 0 },
+  
 };
 
 const NavCta = () => {
@@ -29,16 +31,33 @@ const NavCta = () => {
       
         {/* Avatar & Badge */}
         <motion.div className="relative -left-1 flex h-fit w-fit items-center overflow-visible">
-          <motion.div className="h-17 w-17 overflow-hidden rounded-full border-3 border-zinc-900 bg-red-900">
+          <motion.div className="h-17 w-17  overflow-hidden rounded-full border-3 border-zinc-900 bg-red-900">
             <img
               src="/Nafae.pfp.jpg"
               alt="Avatar"
               className="h-full w-full object-cover"
             />
           </motion.div>
-          <motion.div className="absolute -right-2.5 z-40 flex h-5 w-5 items-center justify-center rounded-full border border-white/20 bg-zinc-900 text-xs font-medium text-white shadow-md">
+
+          
+                <motion.div className="absolute -right-2.5 z-40 flex h-5 w-5 items-center justify-center rounded-full border overflow-hidden border border-white/20 bg-zinc-900 text-xs font-medium text-white shadow-md">
+
+                <motion.div
+                      variants={chidVariants}
+                      transition={{duration:0.2}}
+ className=" ">
             +
           </motion.div>
+                    <motion.div
+                    className="absolute  z-40 flex h-5 w-5 items-center justify-center rounded-full border border-white/20 bg-zinc-900 text-xs font-medium text-white shadow-md"
+
+            variants={childVariants}
+                                  transition={{duration:0.2}}
+>
+              
+              <Phone className="w-2 h-2"/>
+                      </motion.div>
+            </motion.div>
        
        
        
@@ -58,12 +77,16 @@ const NavCta = () => {
         <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden">
           <motion.div
             variants={chidVariants}
+                                  transition={{duration:0.2}}
+
             className="flex h-full w-fit items-center justify-center overflow-hidden px-1 text-center text-sm font-bold"
           >
             Book a Call
           </motion.div>
           <motion.div
             variants={childVariants}
+                                  transition={{duration:0.2}}
+
             className="absolute flex h-fit w-fit items-center justify-center overflow-hidden px-1 text-center text-sm font-bold text-black"
           >
             Book a Call
