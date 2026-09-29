@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Phone } from "lucide-react";
-import { motion } from "framer-motion";
+import { easeIn, motion, scale } from "framer-motion";
 
 const childVariants = {
   initial: { y: "100%", opacity: 0 },
@@ -14,6 +14,11 @@ const chidVariants = {
   hover: { y: "100%", opacity: 0 },
   
 };
+const imgvariants = {
+  
+  hover: {scale: 1.2 },
+  
+};
 
 const NavCta = () => {
   return (
@@ -21,7 +26,7 @@ const NavCta = () => {
       <motion.div
         initial="initial"
         whileHover="hover"
-        className="relative z-10 flex h-10 w-43 items-center justify-between overflow-visible rounded-full border border-white/10 bg-black transition-all hover:bg-white/80"
+        className="relative cursor-pointer z-10 flex h-10 w-43 items-center justify-between overflow-visible rounded-full border border-white/10 bg-black transition-all hover:bg-white/80"
       >
       
       
@@ -32,10 +37,12 @@ const NavCta = () => {
         {/* Avatar & Badge */}
         <motion.div className="relative -left-1 flex h-fit w-fit items-center overflow-visible">
           <motion.div className="h-17 w-17  overflow-hidden rounded-full border-3 border-zinc-900 bg-red-900">
-            <img
+            <motion.img
+           variants={imgvariants}
+           transition={{duration:1.4 , ease:easeIn}}
               src="/Nafae.pfp.jpg"
               alt="Avatar"
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover "
             />
           </motion.div>
 

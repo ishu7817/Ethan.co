@@ -20,7 +20,7 @@ const reelItems = [
 {reelItems.map((text, i) => (
                   <h1
                     key={i}
-                    className=" flex items-center text-center select-none  w-full font-['Array']  font-bold text-nowrap  tracking-wide   "
+                    className=" flex items-center text-center select-none  w-full font-['Array']  font-light text-nowrap  tracking-wide   "
                   >
                     {text}
                   </h1>
