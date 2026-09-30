@@ -3,7 +3,7 @@ import React from "react";
 const Reviews = () => {
   return (
     <div>
-      <div className="flex items-center gap-3 z-20">
+      <div className="flex items-center gap-3 z-20 scale-[0.8] sm:scale-[1]">
         <div className="flex -space-x-3">
           <img
             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"

@@ -8,8 +8,8 @@ const Navbar = () => {
     const linkSUp = new Array ("01", "02", "03")
 
   return (
-    <div>
-            <nav className="fixed w-[95%] xl:w-[60%] h-20   z-50 flex items-center  justify-between  max-w-6xl mx-auto bg-[#343434]/80 backdrop-blur-md rounded-2xl px-3 py-3 border border-white/5">
+    <div className='relative z-50 flex justify-center items-center lg:block'>
+            <nav className="fixed top-6 w-[95%] xl:w-[60%] h-20   z-50 flex items-center  justify-between  max-w-6xl mx-auto bg-[#343434]/80 backdrop-blur-md rounded-2xl px-3 py-3 border border-white/5">
         <div className="flex items-center gap-2 font-['Array']  font-bold text-lg tracking-tight">
           <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
             <path d="M21 4L3 12l18 8-4-8 4-8z" />

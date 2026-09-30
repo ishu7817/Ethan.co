@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef } from "react";
+import HeroVideoScroll from "./HeroVideoScroll";
 
 interface Project {
   id: string;
@@ -39,27 +40,27 @@ const col2Projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full text-white/90 mt-10 lg:mt-20 px-5">
+    <section className=" w-full text-white/90 mt-10 lg:mt-20 px-5">
 
-      {/* Hero Video */}
+ <div className="flex relative gap-8 items-center justify-between">
+          <div>
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+              PROJECTS
+              <br />
+              (27)
+            </h2>
+          </div>
 
-<div className="  w-screen h-screen mb-10 lg:mb-20  flex items-center justify-center"> 
-          <video
-          // ref={videoRef}
-          src= "/about page final.mp4"
-          loop
-          autoPlay
-          muted
-          playsInline
-          preload="metadata"
-          className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        />
-</div>
-
-
-
+          <div className="md:ml-auto max-w-sm">
+            <p className="text-sm md:text-base text-gray-300 font-medium leading-relaxed">
+              Every project starts with the same question — <br />
+              How do I make this idea impossible to scroll past? <br />
+            </p>
+          </div>
+        </div>
+         <HeroVideoScroll src ="/Article page final.mp4"/>
       {/* Column Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+      <div className="  grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         {/* Column 1*/}
         <div className="flex flex-col gap-16 md:gap-24">
           {col1Projects.map((project) => (
@@ -116,6 +117,7 @@ function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
+    
     <div className="group relative flex flex-col gap-4">
       {/* Video Container */}
       <div
