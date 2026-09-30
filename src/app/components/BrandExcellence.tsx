@@ -3,12 +3,12 @@ import React from 'react'
 const BrandExcellence = () => {
   return (
     <div>
-            <section className="relative z-10 w-full px-6 py-12 md:px-12 md:py-20 text-white">
+            <section className="relative z-10 w-full px-6 py-4 md:px-12 md:py-6 text-white">
 
-        <div className="flex flex-col md:ml-34 text-white/90">
+        <div className="flex flex-col md:ml-12 text-white/90">
           {/* Main Statement Heading */}
           <div className="max-w-5xl mb-16 md:mb-24">
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-whit0  lg:text-4xl font-black uppercase tracking-tight leading-tight">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-whit0  lg:text-4xl  font-black uppercase tracking-tight leading-tight">
               I DESIGN AND ANIMATE EXPLAINER VIDEOS, FEATURE ANNOUNCEMENTS, AND
               PRODUCT MOTION THAT TURN COMPLEX IDEAS INTO VISUALS PEOPLE
               ACTUALLY UNDERSTAND.

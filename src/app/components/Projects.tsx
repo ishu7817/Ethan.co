@@ -60,7 +60,7 @@ export default function ProjectsSection() {
         </div>
          <HeroVideoScroll src ="/Article page final.mp4"/>
       {/* Column Grid */}
-      <div className="  grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+      <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         {/* Column 1*/}
         <div className="flex flex-col gap-16 md:gap-24">
           {col1Projects.map((project) => (
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Column 2 */}
-        <div className="flex flex-col gap-16 md:gap-24 md:mt-20">
+        <div className="flex flex-col gap-16 md:gap-24 md:mt-24">
           {col2Projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

@@ -2,7 +2,7 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import { useTransform } from "framer-motion";
 import { motion } from "framer-motion";
-
+import { useSpring } from "framer-motion";
 
 
 function HeroVideoScroll({ src }: { src: string }) {
@@ -12,11 +12,15 @@ function HeroVideoScroll({ src }: { src: string }) {
     target: containerRef,
     offset: ["start start", "end end"],
   });
-
+const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100, // How fast the animation responds (lower = smoother)
+    damping: 30,    // How much friction slows it down (higher = no bounce)
+    restDelta: 0.001,
+  });
   
-  const width = useTransform(scrollYProgress, [0, 1], ["80vw", "98vw"]);
-  const height = useTransform(scrollYProgress, [0, 1], ["80vh", "98vh"]);
-  const borderRadius = useTransform(scrollYProgress, [0, 1], ["12px", "0px"]);
+  const width = useTransform(smoothProgress, [0, 1], ["80vw", "98vw"]);
+  const height = useTransform(smoothProgress, [0, 1], ["80vh", "98vh"]);
+  const borderRadius = useTransform(smoothProgress, [0, 1], ["12px", "0px"]);
 
   return (
     <div ref={containerRef} className="relative h-[200vh] w-full">
