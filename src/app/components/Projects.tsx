@@ -1,7 +1,10 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import HeroVideoScroll from "./HeroVideoScroll";
+import NumberSeperation from "./NumberSeperation";
+import FullscreenVideoModal from "./FullscreenVideoModal";
+
 
 interface Project {
   id: string;
@@ -40,14 +43,14 @@ const col2Projects: Project[] = [
 
 export default function ProjectsSection() {
   return (
-    <section className=" w-full text-white/90 mt-10 lg:mt-20 px-5">
+    <section id="Projects-section" className=" w-full text-white/90 mt-[10vh] px-6 py-6 md:px-12 md:py-8">
+        <NumberSeperation number="02" text="Selected work" />
 
- <div className="flex relative gap-8 items-center justify-between">
-          <div>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-none">
+ <div className=" flex relative gap-8 items-center justify-between">
+          <div className="font-clash =">
+            <h2 className=" tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
               PROJECTS
-              <br />
-              (27)
+
             </h2>
           </div>
 
@@ -82,14 +85,12 @@ export default function ProjectsSection() {
 function ProjectCard({ project }: { project: Project }) {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // 1. Play when hover enters
   const handleMouseEnter = () => {
     if (videoRef.current) {
       videoRef.current.play().catch(() => {});
     }
   };
 
-  // 2. Pause & rewind to initial frame when hover leaves
   const handleMouseLeave = () => {
     if (videoRef.current) {
       videoRef.current.pause();
@@ -97,23 +98,13 @@ function ProjectCard({ project }: { project: Project }) {
     }
   };
 
-  // 3. Launch native browser full-screen on click
+  const [isOpen, setisOpen] = useState(false)
   const handleClick = () => {
-    const video = videoRef.current;
-    if (!video) return;
+    const src = videoRef.current?.src;
+    setisOpen(true)
+  
 
-    // Ensure it's playing when going fullscreen
-    video.play().catch(() => {});
-
-    if (video.requestFullscreen) {
-      video.requestFullscreen();
-    } else if ((video as any).webkitRequestFullscreen) {
-      /* Safari / iOS support */
-      (video as any).webkitRequestFullscreen();
-    } else if ((video as any).msRequestFullscreen) {
-      /* IE11 support */
-      (video as any).msRequestFullscreen();
-    }
+    
   };
 
   return (
@@ -136,6 +127,8 @@ function ProjectCard({ project }: { project: Project }) {
           className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>
+      <FullscreenVideoModal src={` ${videoRef.current?.src}`} isOpen={isOpen} onClose={() => setisOpen(false)}/>
     </div>
+
   );
 }

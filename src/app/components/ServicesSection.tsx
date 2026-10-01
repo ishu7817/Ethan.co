@@ -1,4 +1,5 @@
 import React from "react";
+import NumberSeperation from "./NumberSeperation";
 
 interface ServiceCard {
   id: string;
@@ -49,19 +50,29 @@ const services: ServiceCard[] = [
 
 export default function Services() {
   return (
-    <section className="w-full  relative z-10 text-white">
-      <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter uppercase mb-12 md:mb-20 text-white">
-        From Idea to Impact
-      </h2>
+    <section className=" w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8">
+      <NumberSeperation number="03" text="Services" />
+      <div className=" flex relative gap-8 items-center justify-between mb-[10vh]">
+        <div className="font-clash ">
+          <h2 className="  tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
+            SERVICES
+          </h2>
+        </div>
+
+        <div className="md:ml-auto max-w-sm">
+          <p className="text-sm md:text-base text-gray-300 font-medium leading-relaxed">
+            From Idea to Impact — <br /> Leading with what I specialize in
+          </p>
+        </div>
+      </div>
 
       <div className="relative flex flex-col gap-8 pb-8 ">
         {services.map((card, index) => (
           <div
             key={card.id}
-            style={{ top: 110 + index * 70}}
-            className=
-{            `sticky  w-full bg-zinc-800 border border-t rounded-sm border-x-0 border-white/40 border-t-0 p-6 md:p-10 shadow-4xl transition-all duration-1000`
-}          >
+            style={{ top: 110 + index * 35 }}
+            className={`sticky  w-full bg-zinc-800 border border-t rounded-sm border-x-0 border-white/40 border-t-0  pt-4 pb-6 p-4 shadow-4xl transition-all duration-1000`}
+          >
             <div className="flex gap-52 items-between">
               <div className="lg:col-span-5 flex items-start gap-6 h-full min-w-[35%]">
                 <div className="w-20 h-24 md:w-24 md:h-28 rounded-sm overflow-hidden bg-neutral-300 shrink-0">
@@ -73,10 +84,10 @@ export default function Services() {
                 </div>
 
                 <div className="flex items-start h-full gap-4 text-white/90">
-                  <span className="text-xl md:text-2xl font-mono font-bold ">
+                  <span className="text-xl md:text-2xl  font-bold ">
                     {card.id}
                   </span>
-                  <h3 className="text-xl w-full whitespace-nowrap h-full flex items-start md:text-2xl font-semibold tracking-tight ">
+                  <h3 className="text-xl w-full whitespace-nowrap h-full flex  items-start md:text-2xl  font-bold tracking-tight ">
                     {card.title}
                   </h3>
                 </div>
@@ -91,7 +102,7 @@ export default function Services() {
                   {card.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="bg-zinc-700/90 font-['Array'] text-xs md:text-sm px-3 py-1.5 rounded-md"
+                      className="bg-zinc-700/90   text-xs md:text-sm px-3 py-1.5 rounded-md"
                     >
                       {tag}
                     </span>

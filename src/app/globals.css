@@ -1,18 +1,14 @@
-@import url('https://api.fontshare.com/v2/css?f[]=array@401,600,601,700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 @theme {
-  --font-array: 'array', 'sans-serif';
+  --font-array: 'Array', sans-serif;
+  --font-chillax: 'Chillax', sans-serif;
+  --font-clash: 'Clash Display', sans-serif;
 }
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 @keyframes matrixJitter {
   0%,
@@ -65,9 +61,26 @@
     }
   }
 }
+/* Custom Thin Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #4c4c4c /* Matches dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000 ;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: chillax ;
 }

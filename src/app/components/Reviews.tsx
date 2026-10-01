@@ -3,7 +3,7 @@ import React from "react";
 const Reviews = () => {
   return (
     <div>
-      <div className="flex items-center gap-3 z-20 scale-[0.8] sm:scale-[1]">
+      <div className=" font-chillax flex items-center gap-3 z-20 scale-[0.8] sm:scale-[1]">
         <div className="flex -space-x-3">
           <img
             src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
@@ -26,7 +26,7 @@ const Reviews = () => {
             className="w-8 h-8 rounded-full border border-3 border-[#121212] object-cover z-0"
           />
         </div>
-        <div className="text-[10px] font-bold text-neutral-400  uppercase tracking-wider leading-tight">
+        <div className="text-[10px]  text-neutral-400  uppercase tracking-wider leading-tight">
           <span className="text-white/90 text-xs">4.9/5</span>
           <br />
           Based on 30+ Reviews

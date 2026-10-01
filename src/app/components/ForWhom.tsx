@@ -27,8 +27,8 @@ const ForWhom = () => {
       initial={{scale:1,opacity:0.6 }}
       animate={{scale:1, opacity:1}}
       transition={{duration:0.6}}
-      className="flex justify-end">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap font-bold tracking-tight text-zinc-800 uppercase transition-all duration-3">
+      className="flex justify-end font-chillax">
+        <h2 className="text-2xl  sm:text-3xl md:text-4xl lg:text-5xl whitespace-nowrap  font-bold tracking-tight text-zinc-800 uppercase transition-all duration-3">
     {forrwhom[indexs] ?? ""}</h2>
       </motion.div>
     </div>

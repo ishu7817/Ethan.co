@@ -23,7 +23,7 @@ const smoothProgress = useSpring(scrollYProgress, {
   const borderRadius = useTransform(smoothProgress, [0, 1], ["12px", "0px"]);
 
   return (
-    <div ref={containerRef} className="relative h-[200vh] w-full">
+    <div ref={containerRef} className="relative h-[250vh] w-full">
       
       <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden z-[100]">
         <motion.div

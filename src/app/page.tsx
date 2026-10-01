@@ -2,19 +2,21 @@
 import React from "react";
 import { easeIn, motion } from "framer-motion";
 import { TextRoll } from "./components/Textroll";
-
 import ForWhom from "./components/ForWhom";
+
 import { MicroMesh } from "./components/MicroMesh";
 import Navbar from "./components/Navbar";
 import Reel from "./components/Reel";
 import ProjectsSection from "./components/Projects";
 import NumberSeperation from "./components/NumberSeperation";
 import BrandExcellence from "./components/BrandExcellence";
-import LandingPage1 from "./LandingPage1";
-import LandingPage2 from "./LandingPage2";
+import LandingPage1 from "./components/LandingPage1";
+import LandingPage2 from "./components/LandingPage2";
 import Services from "./components/ServicesSection";
+import Contact from "./components/ContactSection";
 
 export default function Page() {
+  
   return (
     <div className=" w-full relative  bg-[#1a1a1a]/80 scrollbar-none ">
       <MicroMesh />
@@ -33,21 +35,18 @@ export default function Page() {
       </div>
 
       <Reel />
-      <motion.div className="px-6 py-6 md:px-12 md:py-8">
-        <NumberSeperation
-          number="01 "
-          text="Brand Excellence"
-        />
+
         <BrandExcellence />
-        <NumberSeperation number="02" text="Selected work" />
         <ProjectsSection />
-      </motion.div>
+    
       <Reel />
 
-      <motion.div className="px-6 py-6 md:px-12 md:py-8">
-      <NumberSeperation number="03" text="Services"/>
+      
       <Services />
-      </motion.div>
+
+      <Reel />
+     <Contact />
+     
     </div>
   );
 }
