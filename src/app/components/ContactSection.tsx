@@ -2,8 +2,39 @@
 
 import React, { useState } from "react";
 import NumberSeperation from "./NumberSeperation";
+import { span } from "framer-motion/client";
+import { motion } from "framer-motion";
 
 export default function Contact() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.5,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+    },
+  };
+
+  const [copied, setCopied] = useState(false);
+  const email = "hello@nafae.co";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,29 +47,26 @@ export default function Contact() {
   };
 
   return (
-    <section id="Contact-section" className="w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8">
-            <NumberSeperation number="04" text="Contact" />
+    <section
+      id="Contact-section"
+      className="w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8"
+    >
+      <NumberSeperation number="04" text="Contact" />
 
-      {/* MAIN TITLE */}
       <h2 className="text-6xl font-clash sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wide uppercase my-12 md:my-16 text-white">
         Let's Talk
       </h2>
 
-      {/* CONTENT GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-        
-        {/* LEFT COLUMN: PITCH & PROFILE */}
         <div className="lg:col-span-5 flex flex-col gap-8">
           <p className="text-lg md:text-xl text-white/80 max-w-md font-normal leading-relaxed">
-            Have a project in mind? Reach out, and we&apos;ll discuss the best way to move forward.
+            Have a project in mind? Reach out, and we&apos;ll discuss the best
+            way to move forward.
           </p>
-
-         
         </div>
 
         <div className="lg:col-span-7 flex flex-col gap-10">
           <form onSubmit={handleSubmit} className="flex flex-col gap-8">
-            
             {/* Name Input */}
             <div className="flex flex-col gap-2">
               <label className="text-xs font-mono tracking-widest text-white/60 uppercase">
@@ -48,13 +76,14 @@ export default function Contact() {
                 type="text"
                 placeholder="Your Name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
                 className="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors"
                 required
               />
             </div>
 
-            {/* Email Input */}
             <div className="flex flex-col gap-2">
               <label className="text-xs font-mono tracking-widest text-white/60 uppercase">
                 EMAIL
@@ -63,28 +92,30 @@ export default function Contact() {
                 type="email"
                 placeholder="Your Email"
                 value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 className="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors"
                 required
               />
             </div>
 
-            {/* Message Input */}
             <div className="flex flex-col gap-2">
               <label className="text-xs font-mono tracking-widest text-white/60 uppercase">
                 MESSAGE
               </label>
               <textarea
                 rows={3}
-                placeholder="Your Message"
+                placeholder="Your message"
                 value={formData.message}
-                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
                 className="w-full bg-transparent border-b border-white/20 py-3 text-base md:text-lg text-white placeholder:text-white/30 focus:outline-none focus:border-white transition-colors resize-none"
                 required
               />
             </div>
 
-            {/* Pill Submit Button */}
             <div className="pt-2">
               <button
                 type="submit"
@@ -95,21 +126,61 @@ export default function Contact() {
             </div>
           </form>
 
-          {/* Direct Email Link */}
-          <div className="pt-6 border-t border-white/10 flex flex-col gap-2">
+          <div className="pt-6 border-t border-white/10 flex flex-col w-full justify-baseline gap-2">
             <span className="text-sm font-semibold text-white ">Contact</span>
-            <a 
-              href="mailto:contact@nafae.dev"
-              className="text-white/80  hover:text-white underline underline-offset-4 transition-colors w-fit text-base md:text-lg"
-            >
-              hello@nafae.design
-            </a>
+
+            <motion.div className="flex justity-between w-full items-center h-fit">
+              <motion.a
+                 initial={{ y:"100%", opacity:0 }}
+          whileInView={{ y:0, opacity:1 }}
+          viewport={{ once: true }}
+          transition= {{ duration: 0.8, ease: [0.16, 1, 0.3, 1]}}
+
+                  onClick={handleCopy}
+                  className={`text-white/80 cursor-pointer hover:text-white ${copied ? "font-array text-xs" : "underline"} duration-150 underline-offset-4 transition-colors w-fit text-base md:text-lg`}
+                >
+                  {copied ? "Copied!" : "hello@nafae.co"}
+                </motion.a>
+              <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className=" pt-1 flex justify-end w-full   items-baseline gap-10"
+              >
+                
+                <motion.a
+                  variants={itemVariants}
+                  href="https://x.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-zinc-400 hover:text-white transition-colors w-fit text-base md:text-lg"
+                >
+                  X.Com
+                </motion.a>
+                <motion.a
+                  variants={itemVariants}
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-zinc-400 hover:text-white  transition-colors w-fit text-base md:text-lg"
+                >
+                  Instagram
+                </motion.a>
+                <motion.a
+                  variants={itemVariants}
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-zinc-400 hover:text-white  transition-colors w-fit text-base md:text-lg"
+                >
+                  Behance
+                </motion.a>
+              </motion.div>
+            </motion.div>
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }

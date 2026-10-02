@@ -14,6 +14,7 @@ import LandingPage1 from "./components/LandingPage1";
 import LandingPage2 from "./components/LandingPage2";
 import Services from "./components/ServicesSection";
 import Contact from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 export default function Page() {
   
@@ -47,6 +48,7 @@ export default function Page() {
       <Reel />
      <Contact />
      
+    <Footer/>
     </div>
   );
 }
