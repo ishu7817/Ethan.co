@@ -25,6 +25,8 @@ const LandingPage2 = () => {
 
   return (
     <div>
+      <div className="absolute -left-32 -bottom-1/4 -translate-y-1/4 w-[400px] h-[400px] bg-cyan-600/80 rounded-full blur-[140px] pointer-events-none" />
+      
       <motion.div
         variants={containerVariants}
         initial="hidden"

@@ -15,14 +15,12 @@ import LandingPage2 from "./components/LandingPage2";
 import Services from "./components/ServicesSection";
 import Contact from "./components/ContactSection";
 import Footer from "./components/Footer";
-
+import ParallaxLayer from "./components/Paralax";
 export default function Page() {
-  
   return (
     <div className=" w-full relative  bg-[#1a1a1a]/80 scrollbar-none ">
       <MicroMesh />
       <div className="fixed inset-0 bg-gradient-to-bl from-[#424242] via-[#282828]/50 to-transparent pointer-events-none z-0" />
-      <div className="fixed -left-32 -bottom-1/4 -translate-y-1/4 w-[400px] h-[400px] bg-cyan-600/80 rounded-full blur-[140px] pointer-events-none" />
       <div className="relative min-h-screen w-full   overflow-x-hidden font-sans px-6 py-6 md:px-12 md:py-8 ">
         <div className=" relative z-15 px-6 py-6 md:px-12 md:py-8 ">
           {" "}
@@ -30,25 +28,28 @@ export default function Page() {
         </div>
 
         <div className=" relative  w-full h-full flex flex-col gap-28   ">
-          <LandingPage1 />
+          <ParallaxLayer speed={0.1}>
+            <LandingPage1 />
+          </ParallaxLayer>
+
           <LandingPage2 />
         </div>
       </div>
 
       <Reel />
+     <BrandExcellence />
 
-        <BrandExcellence />
-        <ProjectsSection />
-    
+
+      <ProjectsSection />
+
       <Reel />
 
-      
       <Services />
 
       <Reel />
-     <Contact />
-     
-    <Footer/>
+      <Contact />
+
+      <Footer />
     </div>
   );
 }

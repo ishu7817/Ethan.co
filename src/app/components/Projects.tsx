@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import HeroVideoScroll from "./HeroVideoScroll";
 import NumberSeperation from "./NumberSeperation";
 import FullscreenVideoModal from "./FullscreenVideoModal";
+import ParallaxLayer from "./Paralax";
 
 
 interface Project {
@@ -45,8 +46,9 @@ export default function ProjectsSection() {
   return (
     <section id="Projects-section" className=" w-full text-white/90 mt-[10vh] px-6 py-6 md:px-12 md:py-8">
         <NumberSeperation number="02" text="Selected work" />
-
+ <ParallaxLayer speed={0.6}>
  <div className=" flex relative gap-8 items-center justify-between">
+
           <div className="font-clash =">
             <h2 className=" tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
               PROJECTS
@@ -61,17 +63,17 @@ export default function ProjectsSection() {
             </p>
           </div>
         </div>
-         <HeroVideoScroll src ="/Article page final.mp4"/>
-      {/* Column Grid */}
+                  </ParallaxLayer>
+
+         <HeroVideoScroll src ="/Article page demo.mp4"/>
+
       <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-        {/* Column 1*/}
         <div className="flex flex-col gap-16 md:gap-24">
           {col1Projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* Column 2 */}
         <div className="flex flex-col gap-16 md:gap-24 md:mt-24">
           {col2Projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

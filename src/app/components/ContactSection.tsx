@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import NumberSeperation from "./NumberSeperation";
 import { span } from "framer-motion/client";
 import { motion } from "framer-motion";
+import ParallaxLayer from "./Paralax";
 
 export default function Contact() {
   const containerVariants = {
@@ -53,9 +54,12 @@ export default function Contact() {
     >
       <NumberSeperation number="04" text="Contact" />
 
+ <ParallaxLayer speed={0.6}>
+
       <h2 className="text-6xl font-clash sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wide uppercase my-12 md:my-16 text-white">
         Let's Talk
       </h2>
+          </ParallaxLayer>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-5 flex flex-col gap-8">

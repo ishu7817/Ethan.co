@@ -26,12 +26,12 @@ export default function Footer() {
  
 
   return (
-    <footer className="relative max-h-[80vh] min-h-[80vh] w-full bg-[#080809] text-white flex flex-col justify-between  overflow-hidden border-t border-white/10 selection:bg-white selection:text-black">
+    <footer className="relative max-h-[75vh] min-h-[80vh] w-full bg-[#080809] text-white flex flex-col justify-between  overflow-hidden border-t border-white/10 selection:bg-white selection:text-black">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[350px] bg-gradient-to-t from-blue-200 via-blue-300/20 to-transparent blur-3xl pointer-events-none z-0" />
     
     
       <div className="p-8 md:p-16 flex justify-between items-center ">
-<div className="flex flex-col justify-center h-full pt-20  ">
+<div className="flex flex-col justify-center h-full pt-10  ">
 
        <motion.div
        initial={{ opacity:0 }}
@@ -66,6 +66,7 @@ export default function Footer() {
        <motion.div 
        initial={{x:100}}
        whileInView={{x:0}}
+       viewport={{once:true}}
           transition={{ duration: 1, delay:0.2, ease: [0.16, 1, 0.3, 1] }}
        className="relative w-100 h-100   rounded-xl overflow-hidden border border-white/15 bg-zinc-900/50 shrink-0 group">
        

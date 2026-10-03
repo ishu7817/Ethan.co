@@ -1,5 +1,6 @@
 import React from 'react'
 import NumberSeperation from './NumberSeperation'
+import ParallaxLayer from './Paralax'
 
 const BrandExcellence = () => {
   return (
@@ -9,6 +10,8 @@ const BrandExcellence = () => {
 
         <div className="flex flex-col md:ml-24 text-white/90">
           {/* Main Statement Heading */}
+           <ParallaxLayer speed={0.8}>
+
           <div className="max-w-5xl mb-16 md:mb-24">
             <h2 className="text-xl sm:text-2xl md:text-3xl text-whit0  lg:text-4xl  font-extrabold trackin uppercase tracking-tight leading-tight">
               I DESIGN AND ANIMATE EXPLAINER VIDEOS, FEATURE ANNOUNCEMENTS, AND
@@ -16,8 +19,11 @@ const BrandExcellence = () => {
               ACTUALLY UNDERSTAND.
             </h2>
           </div>
+                    </ParallaxLayer>
 
+ <ParallaxLayer speed={0.1}>
           <div className=" text-white/80 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 ">
+
             <div>
               <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2">
                 30-90s
@@ -45,6 +51,8 @@ const BrandExcellence = () => {
               </p>
             </div>
           </div>
+          </ParallaxLayer>
+
         </div>
        </section>
     </div>
