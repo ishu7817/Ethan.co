@@ -108,7 +108,7 @@ useEffect(() => {
           <div className="absolute group right-6 top-6  z-10 flex items-center gap-4">
             <button
               onClick={onClose}
-              className="px-4 py-2 rounded-sm bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-mono text-white transition-colors cursor-pointer"
+              className="px-4 py-2 rounded-sm bg-white/10 hover:bg-white/20 mix-blend-difference border border-white/10 text-xs font-mono text-white transition-colors cursor-pointer"
             >
                ✕
             </button>

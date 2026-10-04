@@ -91,11 +91,11 @@ ctx.fillRect(0, i * BAND, w, BAND);
     <canvas
       ref={ref}
       aria-hidden
-      className=" opacity-80 fixed inset-0 z-0 pointer-events-none w-full h-full"
+      className=" opacity-20  fixed inset-0 z-0 pointer-events-none w-full h-full"
       />
       
      <div 
-        className="fixed opacity-80 brightness-90 -top-[50%] -left-[50%] w-[200%] h-[200%] "
+        className="fixed mix-blend-color-burn opacity-60 brightness-90 -top-[50%] -left-[50%] w-[200%] h-[200%] "
         style={{
           backgroundImage: `
             repeating-linear-gradient(to right, transparent, transparent 0px, rgba(255,255,255,0.2) 1px, rgba(255,255,255,0.2) 2px),

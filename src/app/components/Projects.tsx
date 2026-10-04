@@ -7,6 +7,7 @@ import FullscreenVideoModal from "./FullscreenVideoModal";
 import ParallaxLayer from "./Paralax";
 
 
+
 interface Project {
   id: string;
   video: string;
@@ -15,31 +16,25 @@ interface Project {
 const col1Projects: Project[] = [
   {
     id: "01",
-    video: "/about page final.mp4",
+    video: "/saas-02.mp4#t=1.5",
   },
   {
     id: "02",
-    video: "/Article page demo.mp4",
+    video: "/saas-03.mp4#t=1.5",
   },
-  {
-    id: "03",
-    video: "/Article page final.mp4",
-  },
+  
 ];
 
 const col2Projects: Project[] = [
   {
     id: "04",
-    video: "/Articleread page.mp4",
+    video: "/saas-01.mp4",
   },
   {
     id: "05",
-    video: "/Article page look.mp4",
+    video: "/saas-04.mp4#t=4.5",
   },
-  {
-    id: "06",
-    video: "/Articles page.mp4",
-  },
+  
 ];
 
 export default function ProjectsSection() {
@@ -65,7 +60,7 @@ export default function ProjectsSection() {
         </div>
                   </ParallaxLayer>
 
-         <HeroVideoScroll src ="/Article page demo.mp4"/>
+         <HeroVideoScroll src ="/saas-01.mp4"/>
 
       <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         <div className="flex flex-col gap-16 md:gap-24">
