@@ -83,7 +83,7 @@ const NavCta = () => {
       </motion.div>
 
       {/* Spot Status Badge */}
-      <span className="absolute bottom-1 right-1 flex animate-pulse items-center gap-1 pr-3 text-[10px] text-gray-500">
+      <span className="absolute bottom-1 right-1 flex animate-pulse items-center gap-1 pr-2 text-[10px] text-gray-500">
          <span className="h-1 w-1 rounded-full bg-teal-600/70 blur-[1px]" />2 spots left this month
       </span>
     </div>

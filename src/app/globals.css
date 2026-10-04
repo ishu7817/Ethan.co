@@ -1,47 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --font-array: 'Array', sans-serif;
-  --font-chillax: 'Chillax', sans-serif;
-  --font-clash: 'Clash Display', sans-serif;
+  --font-array: "Array", sans-serif;
+  --font-chillax: "Chillax", sans-serif;
+  --font-clash: "Clash Display", sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+  .micro-frame {
+    animation: none;
+  }
+  .micro-frame:first-child {
+    opacity: 1;
+  }
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
-@keyframes matrixJitter {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-  12.5% {
-    transform: translate3d(-8px, 0, 0);
-  }
-  25% {
-    transform: translate3d(12px, 0, 0);
-  }
-  37.5% {
-    transform: translate3d(-15px, 0, 0);
-  }
-  50% {
-    transform: translate3d(6px, 0, 0);
-  }
-  62.5% {
-    transform: translate3d(-10px, 0, 0);
-  }
-  75% {
-    transform: translate3d(18px, 0, 0);
-  }
-  87.5% {
-    transform: translate3d(-4px, 0, 0);
-  }
-}
 
-.animate-matrix-jitter {
-  /* steps(1) skips smooth interpolation so the noise instantly snaps/glitches */
-  animation: matrixJitter 0.3s steps(1) infinite;
-}
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -61,17 +40,18 @@
     }
   }
 }
-/* Custom Thin Dark Scrollbar */
+
+/* custm scrollbar */
 ::-webkit-scrollbar {
   width: 1px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #4c4c4c /* Matches dark background */
+  background: #4c4c4c; /* Matches dark background */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000 ;
+  background: #000000;
   border-radius: 9999px;
 }
 
@@ -82,5 +62,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: chillax ;
+  font-family: chillax;
 }
