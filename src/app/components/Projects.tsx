@@ -94,7 +94,7 @@ export default function ProjectsSection() {
         </div>
                   </ParallaxLayer>
 
-         <HeroVideoScroll src ="/create.mp4"/>
+         <HeroVideoScroll src ="/Create.mp4"/>
 
       <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         <div className="flex flex-col gap-16 md:gap-24">
