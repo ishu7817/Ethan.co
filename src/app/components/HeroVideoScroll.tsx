@@ -9,6 +9,15 @@ function HeroVideoScroll({ src }: { src: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
+  const [isCompact, setIsCompact] = useState(true);
+
+  useEffect(() => {
+    const compactQuery = window.matchMedia("(max-width: 1023px)");
+    const updateViewport = () => setIsCompact(compactQuery.matches);
+    updateViewport();
+    compactQuery.addEventListener("change", updateViewport);
+    return () => compactQuery.removeEventListener("change", updateViewport);
+  }, []);
 
   const toggleSound = () => {
     if (!videoRef.current) return;
@@ -43,16 +52,12 @@ useEffect(() => {
   const borderRadius = useTransform(smoothProgress, [0, 1], ["12px", "0px"]);
 
   return (
-    <div ref={containerRef} className="relative h-[250vh] w-full">
+    <div ref={containerRef} className="relative w-full lg:h-[250vh]">
       
-      <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden z-[100]">
+      <div className="relative z-[100] flex w-full items-center justify-center overflow-hidden lg:sticky lg:top-0 lg:h-screen">
         <motion.div
-          style={{
-            width,
-            height,
-            borderRadius,
-          }}
-          className="relative overflow-hidden shadow-2xl object-fill"
+          style={isCompact ? { borderRadius: 12 } : { width, height, borderRadius }}
+          className="relative aspect-video w-full overflow-hidden shadow-2xl lg:aspect-auto"
         >
           <video
             ref={videoRef}

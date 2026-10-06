@@ -13,8 +13,8 @@ const LandingPage1 = () => {
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className=" mt-[18vh] flex items-center justify-center   pointer-events-none z-0 selection:bg-transparent"
         >
-         <motion.div className='relative min-w-screen max-h-fit '>
-          <h1 className=" relative text-[10vw]  uppercase text-center font-extrabold z-10 tracking-tight font-clash text-[#09090B]/90  leading-none select-none whitespace-nowrap">
+         <motion.div className="relative min-w-screen min-w-0 max-h-fit">
+          <h1 className="relative z-10 whitespace-nowrap text-center font-clash text-[clamp(1.5rem,9.5vw,10vw)] font-extrabold uppercase leading-none tracking-tight text-[#09090B]/90 select-none">
  <motion.div
         animate={{
           y: ["40%"],
@@ -24,13 +24,13 @@ const LandingPage1 = () => {
           ease: "linear",
         }}
         viewport={{once:true}}
-        className="  opacity-20 absolute min-w-screen h-[20vh] pointer-events-none"
+        className="pointer-events-none absolute inset-x-0 h-[20vh] opacity-20"
         style={{
           background: `linear-gradient(to top, transparent 40%, rgba(255,255,255,0.22) 50%, transparent 100%)`,
           willChange: "transform",
         }}
       />
-            MOTION DESIGNER
+            Motion Designer
           </h1>
         </motion.div>
 
@@ -43,11 +43,11 @@ const LandingPage1 = () => {
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="flex justify-between mt-  "
+            className="mt-0 flex flex-col items-start gap-5 sm:flex-row sm:items-start sm:justify-between"
           >
             <Reviews />
 
-            <div>
+            <div className="w-full sm:w-auto">
               <ForWhom />
             </div>
           </motion.div>

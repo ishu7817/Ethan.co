@@ -31,32 +31,29 @@ const LandingPage2 = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="flex justify-between z-10  font-chillax  "
+        className="z-10 flex flex-col gap-8 font-chillax sm:gap-10 md:flex-row md:items-start md:justify-between"
       >
-            <motion.div variants={itemVariants} className="max-w-sm tracking-wide  ">
+            <motion.div variants={itemVariants} className="w-full max-w-sm tracking-wide">
               <p className="text-sm md:text-base text-gray-300 font-medium leading-snug">
-                I create motion systems that simplify complex products, elevate
-                digital brands, and help companies launch with clarity.
+                I create product-focused videos that help businesses explain,
+                launch, and showcase their products through strong editing,
+                motion design, and visual storytelling.
               </p>
             </motion.div>
 
-            <div className="flex justify-end text-sm font-medium text-white tracking-wider">
+            <div className="flex w-full justify-start text-sm font-medium tracking-wider text-white md:w-auto md:justify-end">
               <motion.ul variants={containerVariants} className="flex flex-col gap-2">
                 <motion.li variants={itemVariants} className="flex items-center gap-3">
-                  <span className="text-gray-500 text-xs">01)</span> Product
-                  Explainers
+                  <span className="text-gray-500 text-xs">01)</span> Video Editing
                 </motion.li>
                 <motion.li variants={itemVariants} className="flex items-center gap-3">
-                  <span className="text-gray-500 text-xs">02)</span> UI
-                  Animation
+                  <span className="text-gray-500 text-xs">02)</span> Launch Videos
                 </motion.li>
                 <motion.li variants={itemVariants} className="flex items-center gap-3">
-                  <span className="text-gray-500 text-xs">03)</span> Launch
-                  Campaigns
+                  <span className="text-gray-500 text-xs">03)</span> Product Demos
                 </motion.li>
                 <motion.li variants={itemVariants} className="flex items-center gap-3">
-                  <span className="text-gray-500 text-xs">04)</span> Brand
-                  Motion
+                  <span className="text-gray-500 text-xs">04)</span> Motion Graphics
                 </motion.li>
               </motion.ul>
             </div>

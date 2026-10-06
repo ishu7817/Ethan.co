@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import NumberSeperation from "./NumberSeperation";
-import { span } from "framer-motion/client";
 import { motion } from "framer-motion";
 import ParallaxLayer from "./Paralax";
 
@@ -27,15 +26,6 @@ export default function Contact() {
     },
   };
 
-  const [copied, setCopied] = useState(false);
-  const email = "hello@nafae.co";
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -56,7 +46,7 @@ export default function Contact() {
 
  <ParallaxLayer speed={0.6}>
 
-      <h2 className="text-6xl font-clash sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-wide uppercase my-12 md:my-16 text-white">
+      <h2 className="my-10 text-[clamp(3rem,12vw,6rem)] font-clash font-black uppercase tracking-wide text-white sm:my-12 md:my-16 md:text-[clamp(5rem,8vw,8rem)] lg:text-9xl">
         Let's Talk
       </h2>
           </ParallaxLayer>
@@ -64,8 +54,7 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
         <div className="lg:col-span-5 flex flex-col gap-8">
           <p className="text-lg md:text-xl text-white/80 max-w-md font-normal leading-relaxed">
-            Have a project in mind? Reach out, and we&apos;ll discuss the best
-            way to move forward.
+            Get in touch to discuss your video editing or motion design project.
           </p>
         </div>
 
@@ -133,29 +122,28 @@ export default function Contact() {
           <div className="pt-6 border-t border-white/10 flex flex-col w-full justify-baseline gap-2">
             <span className="text-sm font-semibold text-white ">Contact</span>
 
-            <motion.div className="flex justity-between w-full items-center h-fit">
-              <motion.a
+            <motion.div className="flex h-fit w-full flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <motion.span
                  initial={{ y:"100%", opacity:0 }}
           whileInView={{ y:0, opacity:1 }}
           viewport={{ once: true }}
           transition= {{ duration: 0.8, ease: [0.16, 1, 0.3, 1]}}
 
-                  onClick={handleCopy}
-                  className={`text-white/80 cursor-pointer hover:text-white ${copied ? "font-array text-xs" : "underline"} duration-150 underline-offset-4 transition-colors w-fit text-base md:text-lg`}
+                  className="w-fit text-base text-white/80 md:text-lg"
                 >
-                  {copied ? "Copied!" : "hello@nafae.co"}
-                </motion.a>
+                  Working remotely worldwide
+                </motion.span>
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                className=" pt-1 flex justify-end w-full   items-baseline gap-10"
+                className="flex w-full flex-wrap items-baseline justify-start gap-x-6 gap-y-2 pt-1 sm:w-auto sm:justify-end md:gap-10"
               >
                 
                 <motion.a
                   variants={itemVariants}
-                  href="https://x.com"
+                  href="https://x.com/Ethandesigned"
                   target="_blank"
                   rel="noreferrer"
                   className="text-zinc-400 hover:text-white transition-colors w-fit text-base md:text-lg"
@@ -164,16 +152,7 @@ export default function Contact() {
                 </motion.a>
                 <motion.a
                   variants={itemVariants}
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-zinc-400 hover:text-white  transition-colors w-fit text-base md:text-lg"
-                >
-                  Instagram
-                </motion.a>
-                <motion.a
-                  variants={itemVariants}
-                  href="https://linkedin.com"
+                  href="https://www.behance.net/ethancole0976"
                   target="_blank"
                   rel="noreferrer"
                   className="text-zinc-400 hover:text-white  transition-colors w-fit text-base md:text-lg"

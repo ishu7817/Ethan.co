@@ -1,52 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.5,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
-    },
-  };
-
   return (
-    <footer className="relative max-h-[75vh] min-h-[80vh] w-full bg-[#080809] text-white flex flex-col justify-between  overflow-hidden border-t border-white/10 selection:bg-white selection:text-black">
+    <footer className="relative flex min-h-[80vh] w-full flex-col justify-between overflow-hidden border-t border-white/10 bg-[#080809] text-white selection:bg-white selection:text-black">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen h-[350px] bg-gradient-to-t from-blue-200 via-blue-300/20 to-transparent blur-3xl pointer-events-none z-0" />
 
 
-      <div className="p-8 md:p-16 flex justify-between items-center ">
-        <div className="flex flex-col justify-center h-full pt-10  ">
+      <div className="flex min-w-0 flex-col gap-8 p-5 sm:p-8 lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:p-16">
+        <div className="flex min-w-0 flex-col justify-center pt-6 sm:pt-10 lg:h-full lg:flex-1 lg:pt-10">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           >
-            <h1>
-              You're <span className="">hooked</span> in the{" "}
-              <span className="font-semibold">first 3 seconds,</span> <br />
+            <p className="text-sm leading-relaxed text-white/80 sm:text-base lg:max-w-none">
+              You&apos;re hooked in the <span className="font-semibold">first 3 seconds,</span> <br />
               yet what you <span className="italic">remember</span> is the
               ending... so here are some flowers from two cuties for you <br />
               (Purple ones are mine)
-            </h1>
+            </p>
           </motion.div>
 
-          <div className="relative overflow-hidden font-array flex justify-between items-center z-10 w-full  border-t border-white/10">
+          <div className="relative z-10 flex w-full items-center justify-between overflow-hidden border-t border-white/10 font-array">
             <motion.div
               initial={{ y: "100%" }}
               whileInView={{ y: "0%" }}
@@ -56,10 +35,10 @@ export default function Footer() {
                 delay: 0.3,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="flex relative items-baseline justify-between w-full"
+              className="relative flex w-full min-w-0 items-baseline justify-between"
             >
-              <h1 className=" text-[128px] xl:text-[334px] font-black   text-white tracking-tight leading-none select-none pointer-events-none">
-                NAFAE
+              <h1 className="pointer-events-none whitespace-nowrap text-[clamp(4rem,12vw,15rem)] font-black leading-none tracking-tight text-white select-none md:text-[128px] xl:text-[300px]">
+                ETHAN
               </h1>
             </motion.div>
           </div>
@@ -70,11 +49,11 @@ export default function Footer() {
           whileInView={{ x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-100 h-100   rounded-xl overflow-hidden border border-white/15 bg-zinc-900/50 shrink-0 group"
+          className="group relative aspect-square w-full max-w-[20rem] shrink-0 self-center overflow-hidden rounded-xl border border-white/15 bg-zinc-900/50 lg:h-100 lg:w-100 lg:max-w-none lg:self-auto"
         >
           <img
-            src="/dog.png"
-            alt="Retention Reward"
+            src="/dog.webp"
+            alt="A dog wearing a flower crown"
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {/* Glass sheen overlay */}

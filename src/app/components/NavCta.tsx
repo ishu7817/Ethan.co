@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Phone } from "lucide-react";
-import { easeIn, motion, scale } from "framer-motion";
+import { motion } from "framer-motion";
 import { useLenis } from "lenis/react";
 
 const childVariants = {
@@ -14,10 +14,6 @@ const chidVariants = {
   initial: { y: "0", opacity: 1 },
   hover: { y: "100%", opacity: 0 },
 };
-const imgvariants = {
-  hover: { scale: 1.2 },
-};
-
 const NavCta = () => {
   const lenis = useLenis();
   const handleScrollTo = (targetId: string) => {
@@ -35,14 +31,8 @@ const NavCta = () => {
       >
         {/* Avatar & Badge */}
         <motion.div className="relative -left-1 flex h-fit w-fit items-center overflow-visible">
-          <motion.div className="h-17 w-17  overflow-hidden rounded-full border-3 border-zinc-900 bg-red-900">
-            <motion.img
-              variants={imgvariants}
-              transition={{ duration: 1.4, ease: easeIn }}
-              src="/Nafae.pfp.jpg"
-              alt="Avatar"
-              className="h-full w-full object-cover "
-            />
+          <motion.div className="flex h-17 w-17 items-center justify-center overflow-hidden rounded-full border-3 border-zinc-900 bg-zinc-100 font-bold text-zinc-900">
+            <img src="/pfp.webp" alt="Ethan" className="h-full w-full object-cover" />
           </motion.div>
 
           <motion.div className="absolute -right-2.5 z-40 flex h-5 w-5 items-center justify-center rounded-full border overflow-hidden border border-white/20 bg-zinc-900 text-xs font-medium text-white shadow-md">
@@ -83,8 +73,8 @@ const NavCta = () => {
       </motion.div>
 
       {/* Spot Status Badge */}
-      <span className="absolute bottom-1 right-1 flex animate-pulse items-center gap-1 pr-2 text-[10px] text-gray-500">
-         <span className="h-1 w-1 rounded-full bg-teal-600/70 blur-[1px]" />2 spots left this month
+      <span className="absolute bottom-1 right-1 flex animate-pulse items-center gap-1 pr-5 text-[10px] text-gray-500">
+         <span className="h-1 w-1 rounded-full bg-teal-600/70 blur-[1px]" />Available Now
       </span>
     </div>
   );

@@ -4,8 +4,8 @@ import { ReactLenis } from "lenis/react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Nafae.co",
-  description: "Motion Design Portfolio",
+  title: "Ethan | Motion Designer & Video Editor",
+  description: "Freelance video editor and motion designer creating product-focused videos for SaaS, AI, startups, and digital brands worldwide.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

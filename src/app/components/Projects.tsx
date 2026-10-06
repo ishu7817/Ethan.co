@@ -16,11 +16,15 @@ interface Project {
 const col1Projects: Project[] = [
   {
     id: "01",
-    video: "/saas-02.mp4#t=1.5",
+    video: "/Atolio.mp4#t=1.5",
   },
   {
     id: "02",
-    video: "/saas-03.mp4#t=1.5",
+    video: "/AvaAI.mp4#t=1.5",
+  },
+  {
+    id: "03",
+    video: "/WasteProtection.mp4#t=1.2",
   },
   
 ];
@@ -28,11 +32,15 @@ const col1Projects: Project[] = [
 const col2Projects: Project[] = [
   {
     id: "04",
-    video: "/saas-01.mp4",
+    video: "/Post+Self.mp4",
   },
   {
     id: "05",
-    video: "/saas-04.mp4#t=4.5",
+    video: "/Alex Ai.mp4",
+  },
+  {
+    id: "06",
+    video: "/Carpool.mp4",
   },
   
 ];
@@ -42,25 +50,25 @@ export default function ProjectsSection() {
     <section id="Projects-section" className=" w-full text-white/90 mt-[10vh] px-6 py-6 md:px-12 md:py-8">
         <NumberSeperation number="02" text="Selected work" />
  <ParallaxLayer speed={0.6}>
- <div className=" flex relative gap-8 items-center justify-between">
+ <div className="relative flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
 
           <div className="font-clash =">
-            <h2 className=" tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
+            <h2 className=" tracking-wide text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
               PROJECTS
 
             </h2>
           </div>
 
-          <div className="md:ml-auto max-w-sm">
+          <div className="max-w-sm sm:ml-auto sm:text-right">
             <p className="text-sm md:text-base text-gray-300 font-medium leading-relaxed">
-              Every project starts with the same question — <br />
-              How do I make this idea impossible to scroll past? <br />
+              Product-focused videos that help businesses explain, launch,
+              and showcase their products.
             </p>
           </div>
         </div>
                   </ParallaxLayer>
 
-         <HeroVideoScroll src ="/saas-01.mp4"/>
+         <HeroVideoScroll src ="/create.mp4"/>
 
       <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         <div className="flex flex-col gap-16 md:gap-24">
@@ -75,6 +83,8 @@ export default function ProjectsSection() {
           ))}
         </div>
       </div>
+      <div><button className="undreline w-full mt-[10vh] mx-auto">
+          View All</button></div>
     </section>
   );
 }
@@ -97,11 +107,7 @@ function ProjectCard({ project }: { project: Project }) {
 
   const [isOpen, setisOpen] = useState(false)
   const handleClick = () => {
-    const src = videoRef.current?.src;
     setisOpen(true)
-  
-
-    
   };
 
   return (
@@ -109,7 +115,7 @@ function ProjectCard({ project }: { project: Project }) {
     <div className="group relative flex flex-col gap-4">
       {/* Video Container */}
       <div
-        className="relative w-full aspect-[16/10] overflow-hidden transition-colors duration-500 cursor-pointer"
+      className="relative aspect-video w-full cursor-pointer overflow-hidden transition-colors duration-500 sm:aspect-[16/10]"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
@@ -124,7 +130,7 @@ function ProjectCard({ project }: { project: Project }) {
           className="w-full h-full object-contain transition-transform duration-700 ease-out group-hover:scale-105"
         />
       </div>
-      <FullscreenVideoModal src={` ${videoRef.current?.src}`} isOpen={isOpen} onClose={() => setisOpen(false)}/>
+      <FullscreenVideoModal src={project.video} isOpen={isOpen} onClose={() => setisOpen(false)}/>
     </div>
 
   );

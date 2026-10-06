@@ -2,15 +2,14 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Reel = () => {
 const reelItems = [
-  "MOTION DESIGN",
+  "VIDEO EDITING",
+  "LAUNCH VIDEOS",
+  "PRODUCT DEMOS",
   "MOTION GRAPHICS",
-  "LONG-FORM EDITING",
-  "UI ANIMATION",
-  "AFTER EFFECTS",
-  "KINETIC TYPOGRAPHY",
-  "PRODUCT LAUNCH",
-  "FEATURE ANNOUNCEMENTS",
-  "SAAS MOTION DESIGN",
+  "UI/UX ANIMATION",
+  "EXPLAINER VIDEOS",
+  "3D PRODUCT ANIMATION",
+  "SHORT-FORM CONTENT",
 ];
   return (
     <div>

@@ -14,38 +14,30 @@ const services: ServiceCard[] = [
   {
     id: "01",
     title: "SaaS Explainer Videos",
-    heading: "Turn Your Product Into a Story",
-    tags: [
-      "Concept Development",
-      "Storyboarding",
-      "UI Animation",
-      "CTA-Driven Endings",
-    ],
-    image: "/thumb-1.jpg",
+    heading: "Make a complex product clear, compelling, and easy to understand",
+    tags: ["Product Storytelling", "Feature Walkthroughs", "Visual Clarity"],
+    image: "/thumb-1.webp",
   },
   {
     id: "02",
-    title: "Feature Announcements",
-    heading: "Make Every Update Feel Like an Event",
-    tags: [
-      "Motion Graphics",
-      "Screen Recording",
-      "Micro-Interactions",
-      "Product Highlight Reels",
-    ],
-    image: "/thumb-2.jpg",
+    title: "Launch Videos",
+    heading: "Build attention around a product or feature launch",
+    tags: ["Product Launches", "Feature Launches", "Launch Campaigns"],
+    image: "/thumb-2.webp",
   },
   {
     id: "03",
-    title: "Long-Form Video Editing",
-    heading: "Bring your vision to life through motion",
-    tags: [
-      "Talking Head Editing",
-      "Documentary-Style",
-      "B-Roll Curation",
-      "Color Grading",
-    ],
-    image: "/thumb-3.jpg",
+    title: "Product Demo Videos",
+    heading: "Show how the product works and why its key features matter",
+    tags: ["Product Walkthroughs", "Feature Showcases", "UI Animation"],
+    image: "/thumb-3.webp",
+  },
+  {
+    id: "04",
+    title: "3D Product Animation",
+    heading: "Bring products to life with polished 3D visuals for launches and marketing",
+    tags: ["3D Visuals", "Product Launches", "Marketing"],
+    image: "/thumb-4.webp",
   },
 ];
 
@@ -54,33 +46,33 @@ export default function Services() {
     <section className=" w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8">
       <NumberSeperation number="03" text="Services" />
          <ParallaxLayer speed={0.6}>
-      <div className=" flex relative gap-8 items-center justify-between mb-[10vh]">
+      <div className="relative mb-12 flex flex-col items-start gap-4 sm:mb-16 sm:flex-row sm:items-end sm:justify-between md:mb-[10vh] md:gap-8">
 
         <div className="font-clash">
-          <h2 className="  tracking-wide text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black  leading-none">
+          <h2 className="text-4xl font-black leading-none tracking-wide sm:text-6xl md:text-7xl lg:text-8xl">
             SERVICES
           </h2>
         </div>
 
-        <div className="md:ml-auto max-w-sm">
+        <div className="max-w-sm sm:ml-auto sm:text-right">
           <p className="text-sm md:text-base text-gray-300 font-medium leading-relaxed">
-            From Idea to Impact — <br /> Leading with what I specialize in
+            SaaS · AI · Startups · FinTech · Apps · Creators · Digital Products · E-commerce
           </p>
         </div>
       </div>
                 </ParallaxLayer>
 
 
-      <div className="relative flex flex-col gap-8 pb-8 ">
+      <div className="relative flex flex-col gap-6 pb-8 sm:gap-8">
         {services.map((card, index) => (
           <div
             key={card.id}
             style={{ top: 110 + index * 35 }}
-            className={`sticky  w-full bg-zinc-800 border border-t rounded-sm border-x-0 border-white/40 border-t-0  pt-4 pb-6 p-4 shadow-4xl transition-all duration-1000`}
+            className="relative w-full rounded-sm border border-x-0 border-t-0 border-white/40 bg-zinc-800 p-3 pt-4 pb-6 shadow-4xl transition-all duration-1000 sm:p-4 sm:pt-5 sm:pb-6 lg:sticky"
           >
-            <div className="flex gap-52 items-between">
-              <div className="lg:col-span-5 flex items-start gap-6 h-full min-w-[35%]">
-                <div className="w-20 h-24 md:w-24 md:h-28 rounded-sm overflow-hidden bg-neutral-300 shrink-0">
+            <div className="flex min-w-0 flex-col gap-6 lg:flex-row lg:items-start lg:gap-12">
+              <div className="flex min-w-0 items-start gap-4 sm:gap-6 lg:w-[40%] lg:shrink-0">
+                <div className="h-20 w-16 shrink-0 overflow-hidden rounded-sm bg-neutral-300 sm:h-24 sm:w-20 md:h-28 md:w-24">
                   <img
                     src={card.image}
                     alt={card.title}
@@ -88,26 +80,26 @@ export default function Services() {
                   />
                 </div>
 
-                <div className="flex items-start h-full gap-4 text-white/90">
-                  <span className="text-xl md:text-2xl  font-bold ">
+                <div className="flex min-w-0 items-start gap-3 text-white/90 sm:gap-4">
+                  <span className="shrink-0 text-lg font-bold sm:text-xl md:text-2xl">
                     {card.id}
                   </span>
-                  <h3 className="text-xl w-full whitespace-nowrap h-full flex  items-start md:text-2xl  font-bold tracking-tight ">
+                  <h3 className="min-w-0 break-words text-lg font-bold tracking-tight sm:text-xl md:text-2xl">
                     {card.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="lg:col-span-7 flex flex-col gap-6 items-start text-white/80">
-                <h4 className="text-2xl md:text-3xl font-medium tracking-tight text-start w-full ">
+              <div className="flex min-w-0 flex-col items-start gap-4 text-white/80 sm:gap-6 lg:flex-1">
+                <h4 className="w-full break-words text-xl font-medium tracking-tight sm:text-2xl md:text-3xl">
                   {card.heading}
                 </h4>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex w-full flex-wrap gap-2">
                   {card.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="bg-zinc-700/90   text-xs md:text-sm px-3 py-1.5 rounded-md"
+                      className="rounded-md bg-zinc-700/90 px-3 py-1.5 text-xs sm:text-sm"
                     >
                       {tag}
                     </span>

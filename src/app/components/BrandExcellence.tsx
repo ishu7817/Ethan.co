@@ -6,7 +6,7 @@ const BrandExcellence = () => {
   return (
     <div>
             <section className="relative z-10 w-full  text-white px-6 py-6 md:px-12 md:py-8">
-        <NumberSeperation number="01" text="Brand Excellence" />
+        <NumberSeperation number="01" text="About Ethan" />
 
         <div className="flex flex-col md:ml-24 text-white/90">
           {/* Main Statement Heading */}
@@ -14,9 +14,8 @@ const BrandExcellence = () => {
 
           <div className="max-w-5xl mb-16 md:mb-24">
             <h2 className="text-xl sm:text-2xl md:text-3xl text-whit0  lg:text-4xl  font-extrabold trackin uppercase tracking-tight leading-tight">
-              I DESIGN AND ANIMATE EXPLAINER VIDEOS, FEATURE ANNOUNCEMENTS, AND
-              PRODUCT MOTION THAT TURN COMPLEX IDEAS INTO VISUALS PEOPLE
-              ACTUALLY UNDERSTAND.
+              FREELANCE VIDEO EDITOR &amp; MOTION DESIGNER HELPING SAAS, AI,
+              STARTUPS, AND DIGITAL PRODUCTS TURN IDEAS INTO ENGAGING VIDEOS.
             </h2>
           </div>
                     </ParallaxLayer>

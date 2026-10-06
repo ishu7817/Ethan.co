@@ -17,23 +17,23 @@ const Navbar = () => {
       };
   return (
     <div className=' font-chillax relative z-50 flex justify-center items-center lg:block'>
-            <nav className="fixed top-6 w-[95%] xl:w-[60%] h-20   z-50 flex items-center  justify-between  max-w-6xl mx-auto bg-[#343434]/80 backdrop-blur-md rounded-2xl px-3 py-3 border border-white/5">
-        <div className="flex items-center gap-2    font-bold text-lg tracking-tight">
+            <nav className="fixed left-1/2 top-4 z-50 flex h-20 w-[calc(100%_-_2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-2xl border border-white/5 bg-[#343434]/80 px-3 py-3 backdrop-blur-md sm:top-6 sm:w-[95%] xl:left-auto xl:mx-auto xl:w-[60%] xl:translate-x-0">
+        <div className="flex shrink-0 items-center gap-2 font-bold text-lg tracking-tight">
           <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
             <path d="M21 4L3 12l18 8-4-8 4-8z" />
           </svg>
-          Nafae
+          Ethan
         </div>
 
         <ul
-        className="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
+        className="hidden items-center gap-4 text-sm font-medium text-gray-300 md:flex lg:gap-10">
         {navlinks.map((text, i)=>(
           <li 
           key={i} 
           onClick={() => handleScrollTo(`#${text}-section`)}    
 
-          className="hover:text-white cursor-pointer transition-colors ">
-<TextRoll>{text}</TextRoll> <sup className="text-[10px] text-gray-500">0{i+1}</sup>          </li>
+          className="hover:text-white cursor-pointer transition-colors text-[14px] md:text-[16px] ">
+<TextRoll>{text}</TextRoll> <sup className="text-[10px]   text-gray-500">0{i+1}</sup>          </li>
 
 ))}
 </ul>

@@ -22,9 +22,8 @@ export default function Page() {
       <MicroMesh />
       <div className="fixed inset-0 bg-gradient-to-bl from-[#424242]/50 via-[#282828]/50 to-transparent pointer-events-none  z-0" />
       <div className="relative min-h-screen w-full   overflow-x-hidden font-sans px-6 py-6 md:px-12 md:py-8 ">
-        <div className=" relative z-15 px-6 py-6 md:px-12 md:py-8 ">
-          {" "}
-          <Navbar />{" "}
+        <div className="relative z-15 py-6 md:py-8">
+          <Navbar />
         </div>
 
         <div className=" relative  w-full h-full flex flex-col gap-28   ">
@@ -36,7 +35,7 @@ export default function Page() {
         </div>
       </div>
 
-      <Reel />
+       <Reel />
      <BrandExcellence />
 
 
@@ -48,8 +47,8 @@ export default function Page() {
 
       <Reel />
       <Contact />
-
-      <Footer />
+     
+      <Footer /> 
     </div>
   );
 }
