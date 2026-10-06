@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -60,6 +61,30 @@ export default function Footer() {
           <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-transparent to-white/10 pointer-events-none" />
         </motion.div>
       </div>
+                  <motion.div
+              initial={{ y: "100%" }}
+              whileInView={{ y: "0%" }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 1.2,
+                delay: 0.3,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            className="absolute left-4 bottom-2 ">
+        <h1 className="text-sm  text-zinc-800 group hover:cursor-pointer transition-all duration-500 ">
+        <span>
+          Site by  
+          </span>
+          <span className="  font-semibold  group-hover:text-white/50  "> 
+<a 
+      href="https://x.com/IshuSyncs" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="font-semibold  underline underline-offset-4 decoration-zinc-700 transition-colors duration-300 hover:text-white/50 hover:decoration-white"
+    > @IshuSyncs
+    </a>            </span>
+        </h1>
+      </motion.div>
     </footer>
   );
 }

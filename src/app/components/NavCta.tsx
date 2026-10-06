@@ -31,7 +31,7 @@ const NavCta = () => {
       >
         {/* Avatar & Badge */}
         <motion.div className="relative -left-1 flex h-fit w-fit items-center overflow-visible">
-          <motion.div className="flex h-17 w-17 items-center justify-center overflow-hidden rounded-full border-3 border-zinc-900 bg-zinc-100 font-bold text-zinc-900">
+          <motion.div className="hover:scale-30 transition-all duration-700 flex h-17 w-17 items-center justify-center overflow-hidden rounded-full border-3 border-zinc-900 bg-zinc-100 font-bold text-zinc-900">
             <img src="/pfp.webp" alt="Ethan" className="h-full w-full object-cover" />
           </motion.div>
 

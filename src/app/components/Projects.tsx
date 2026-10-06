@@ -26,26 +26,52 @@ const col1Projects: Project[] = [
     id: "03",
     video: "/WasteProtection.mp4#t=1.2",
   },
+  {
+    id: "04",
+    video: "/Skedul.mp4",
+  },
+  {
+    id: "05",
+    video: "/Flowly.mp4",
+  },
+  
   
 ];
 
 const col2Projects: Project[] = [
   {
-    id: "04",
+    id: "06",
     video: "/Post+Self.mp4",
   },
   {
-    id: "05",
+    id: "07",
     video: "/Alex Ai.mp4",
   },
   {
-    id: "06",
+    id: "08",
     video: "/Carpool.mp4",
   },
+  {
+    id: "9",
+    video: "/Skai.trade.mp4",
+  },
+  {
+    id: "10",
+    video: "/SendAway.mp4",
+  },
+  
   
 ];
 
 export default function ProjectsSection() {
+
+
+  const [isAll, setisAll] = useState(false)
+
+
+  const initialLoadVideos1 = isAll? col1Projects: col1Projects.slice(0,2)
+  const initialLoadVideos2 = isAll? col2Projects: col2Projects.slice(0,2)
+  
   return (
     <section id="Projects-section" className=" w-full text-white/90 mt-[10vh] px-6 py-6 md:px-12 md:py-8">
         <NumberSeperation number="02" text="Selected work" />
@@ -72,19 +98,25 @@ export default function ProjectsSection() {
 
       <div className=" mt-4 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
         <div className="flex flex-col gap-16 md:gap-24">
-          {col1Projects.map((project) => (
+          {initialLoadVideos1.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
         <div className="flex flex-col gap-16 md:gap-24 md:mt-24">
-          {col2Projects.map((project) => (
+          {initialLoadVideos2.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>
-      <div><button className="undreline w-full mt-[10vh] mx-auto">
-          View All</button></div>
+    
+    {!isAll &&
+     <div><button
+      onClick={() =>setisAll(true)}
+       className="undreline hover:scale-95 text-zinc-600 hover:text-white cursor-pointer  transition-all duration-300 w-full mt-[10vh] mx-auto">
+          View All</button>
+          </div>
+}
     </section>
   );
 }
