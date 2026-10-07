@@ -34,25 +34,25 @@ const LandingPage2 = () => {
         className="z-10 flex  gap-8 font-chillax md:items-center justify-between"
       >
             <motion.div variants={itemVariants} className="w-full max-w-sm tracking-wide">
-              <p className="text-sm md:text-base text-gray-300 font-medium leading-snug">
+              <p className=" xss:text-start text-center text-sm md:text-base text-gray-300 font-medium leading-snug">
                 I create product-focused videos that help businesses explain,
                 launch, and showcase their products through strong editing,
                 motion design, and visual storytelling.
               </p>
             </motion.div>
 
-            <div className=" hidden sm:flex  justify-start text-sm font-medium tracking-wider text-white md:w-auto md:justify-end">
+            <div className=" hidden xss:flex  justify-start text-sm font-medium tracking-wider text-white md:w-auto md:justify-end">
               <motion.ul variants={containerVariants} className="flex flex-col gap-2">
-                <motion.li variants={itemVariants} className="flex items-center gap-3">
+                <motion.li variants={itemVariants} className="flex items-center gap-3 whitespace-nowrap">
                   <span className="text-gray-500 text-xs">01)</span> Video Editing
                 </motion.li>
-                <motion.li variants={itemVariants} className="flex items-center gap-3">
+                <motion.li variants={itemVariants} className="flex items-center gap-3 whitespace-nowrap">
                   <span className="text-gray-500 text-xs">02)</span> Launch Videos
                 </motion.li>
-                <motion.li variants={itemVariants} className="flex items-center gap-3">
+                <motion.li variants={itemVariants} className="flex items-center gap-3 whitespace-nowrap">
                   <span className="text-gray-500 text-xs">03)</span> Product Demos
                 </motion.li>
-                <motion.li variants={itemVariants} className="flex items-center gap-3">
+                <motion.li variants={itemVariants} className="flex items-center gap-3 whitespace-nowrap">
                   <span className="text-gray-500 text-xs">04)</span> Motion Graphics
                 </motion.li>
               </motion.ul>
