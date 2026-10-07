@@ -28,7 +28,7 @@ const Reel = () => {
         whileInView={{ y: "0%", opacity: 1 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
-        className="scrollbar-none relative my-20 w-full h-5 bg-black/30 backdrop-blur-md text-zinc-200 py-2 items-center flex overflow-x-hidden"
+        className="scrollbar-none relative my-8 sm:my-10 xl:my-20 w-full h-5 bg-black/30 backdrop-blur-md text-zinc-200 py-2 items-center flex overflow-x-hidden"
       >
         <div className="  flex  w-full h-full items-center  gap-[8%] animate-marquee text-center ">
           {reelItems.map((text, i) => (

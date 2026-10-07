@@ -43,10 +43,10 @@ const services: ServiceCard[] = [
 
 export default function Services() {
   return (
-    <section className=" w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8">
+    <section className=" w-full relative z-10 text-white px-6 py-4 md:px-12 md:py-5 xl:py-8">
       <NumberSeperation number="03" text="Services" />
          <ParallaxLayer speed={0.6}>
-      <div className="relative mb-12 flex flex-col items-start gap-4 sm:mb-16 sm:flex-row sm:items-end sm:justify-between md:mb-[10vh] md:gap-8">
+      <div className="relative mb-6 flex flex-col items-start gap-4 sm:mb-8 sm:flex-row sm:items-end sm:justify-between xl:mb-[10vh] xl:gap-8">
 
         <div className="font-clash">
           <h2 className="text-4xl font-black leading-none tracking-wide sm:text-6xl md:text-7xl lg:text-8xl">
@@ -63,7 +63,7 @@ export default function Services() {
                 </ParallaxLayer>
 
 
-      <div className="relative flex flex-col gap-6 pb-8 sm:gap-8">
+      <div className="relative flex flex-col gap-4 pb-6 sm:gap-5 xl:gap-8 xl:pb-8">
         {services.map((card, index) => (
           <div
             key={card.id}

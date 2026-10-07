@@ -12,7 +12,7 @@ const BrandExcellence = () => {
           {/* Main Statement Heading */}
            <ParallaxLayer speed={0.8}>
 
-          <div className="max-w-5xl mb-16 md:mb-24">
+          <div className="max-w-5xl mb-8 sm:mb-12 xl:mb-24">
             <h2 className="text-xl sm:text-2xl md:text-3xl text-whit0  lg:text-4xl  font-extrabold trackin uppercase tracking-tight leading-tight">
               FREELANCE VIDEO EDITOR &amp; MOTION DESIGNER HELPING SAAS, AI,
               STARTUPS, AND DIGITAL PRODUCTS TURN IDEAS INTO ENGAGING VIDEOS.
@@ -21,7 +21,7 @@ const BrandExcellence = () => {
                     </ParallaxLayer>
 
  <ParallaxLayer speed={0.1}>
-          <div className=" text-white/80 grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 ">
+          <div className=" text-white/80 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 xl:gap-12 ">
 
             <div>
               <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2">

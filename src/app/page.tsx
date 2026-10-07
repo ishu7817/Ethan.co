@@ -21,12 +21,12 @@ export default function Page() {
     <div className=" w-full relative  bg-[#1a1a1a] scrollbar-none ">
       <MicroMesh />
       <div className="fixed inset-0 bg-gradient-to-bl from-[#424242]/50 via-[#282828]/50 to-transparent pointer-events-none  z-0" />
-      <div className="relative min-h-screen w-full   overflow-x-hidden font-sans px-6 py-6 md:px-12 md:py-8 ">
-        <div className="relative z-15 py-6 md:py-8">
+      <div className="relative min-h-screen w-full   overflow-x-hidden font-sans px-6 py-4 md:px-12 md:py-6 xl:py-8 ">
+        <div className="relative z-15 py-3 md:py-4 xl:py-8">
           <Navbar />
         </div>
 
-        <div className=" relative  w-full h-full flex flex-col gap-28   ">
+        <div className=" relative  w-full h-full flex flex-col gap-12 sm:gap-16 xl:gap-28   ">
           <ParallaxLayer speed={0.1}>
             <LandingPage1 />
           </ParallaxLayer>

@@ -49,18 +49,18 @@ export default function Contact() {
   return (
     <section
       id="Contact-section"
-      className="w-full relative z-10 text-white px-6 py-6 md:px-12 md:py-8"
+      className="w-full relative z-10 text-white px-6 py-4 md:px-12 md:py-5 xl:py-8"
     >
       <NumberSeperation number="04" text="Contact" />
 
  <ParallaxLayer speed={0.6}>
 
-      <h2 className="my-10 text-[clamp(3rem,12vw,6rem)] font-clash font-black uppercase tracking-wide text-white sm:my-12 md:my-16 md:text-[clamp(5rem,8vw,8rem)] lg:text-9xl">
+      <h2 className="my-6 text-[clamp(3rem,12vw,6rem)] font-clash font-black uppercase tracking-wide text-white sm:my-8 xl:my-16 md:text-[clamp(5rem,8vw,8rem)] lg:text-9xl">
         Let's Talk
       </h2>
           </ParallaxLayer>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-20 items-start">
         <div className="lg:col-span-5 flex flex-col gap-8">
           <p className="text-lg md:text-xl text-white/80 max-w-md font-normal leading-relaxed">
             Get in touch to discuss your video editing or motion design project.
