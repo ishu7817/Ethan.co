@@ -31,7 +31,7 @@ const LandingPage2 = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="z-10 flex flex-col gap-8 font-chillax sm:gap-10 md:flex-row md:items-start md:justify-between"
+        className="z-10 flex  gap-8 font-chillax md:items-center justify-between"
       >
             <motion.div variants={itemVariants} className="w-full max-w-sm tracking-wide">
               <p className="text-sm md:text-base text-gray-300 font-medium leading-snug">
@@ -41,7 +41,7 @@ const LandingPage2 = () => {
               </p>
             </motion.div>
 
-            <div className="flex w-full justify-start text-sm font-medium tracking-wider text-white md:w-auto md:justify-end">
+            <div className=" hidden sm:flex  justify-start text-sm font-medium tracking-wider text-white md:w-auto md:justify-end">
               <motion.ul variants={containerVariants} className="flex flex-col gap-2">
                 <motion.li variants={itemVariants} className="flex items-center gap-3">
                   <span className="text-gray-500 text-xs">01)</span> Video Editing

@@ -9,7 +9,7 @@ const ForWhom = () => {
   const forrwhom = new Array(
     "For SaaS Companies",
     "For AI Products",
-    "For Startups & Founders",
+    "For Startups",
     "For Digital Brands",
   );
 
@@ -29,7 +29,7 @@ const ForWhom = () => {
       animate={{scale:1, opacity:1}}
       transition={{duration:0.6}}
       className="flex justify-start font-chillax sm:justify-end">
-        <h2 className="max-w-full text-right text-[clamp(1rem,4vw,2.75rem)] font-bold uppercase tracking-tighter text-neutral-900 transition-all duration-300">
+        <h2 className="max-w-full text-right text-[clamp(1rem,4.5vw,2.75rem)] font-bold uppercase tracking-tighter text-neutral-900 transition-all duration-300">
     {forrwhom[indexs] ?? ""}</h2>
       </motion.div>
     </div>

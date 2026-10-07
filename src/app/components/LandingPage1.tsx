@@ -14,7 +14,7 @@ const LandingPage1 = () => {
           className=" mt-[18vh] flex items-center justify-center   pointer-events-none z-0 selection:bg-transparent"
         >
          <motion.div className="relative min-w-screen min-w-0 max-h-fit">
-          <h1 className="relative z-10 whitespace-nowrap text-center font-clash text-[clamp(1.5rem,10vw,10.5vw)] font-extrabold uppercase leading-none tracking-tight text-[#09090B]/90 select-none">
+          <h1 className="relative z-10 sm:whitespace-nowrap text-center font-clash text-[clamp(1.5rem,10vw,10.5vw)] font-extrabold uppercase leading-none tracking-tight text-[#09090B]/90 select-none">
  <motion.div
         // animate={{
         //   y: ["40%"],

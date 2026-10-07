@@ -1,7 +1,7 @@
 // components/ClientBadge.tsx
 import React from 'react';
 
-const clients = ['Stan Browney Team', 'Cody Hamilton', 'Ayush Garg'];
+const clients = ['Stan Browney', 'Cody Hamilton', 'Ayush Garg'];
 
 export default function Reviews() {
   return (
@@ -14,13 +14,13 @@ export default function Reviews() {
 
       {/* Client List */}
       <div className="flex flex-col">
-        <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+        <span className=" text-[8px] sm:text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
           Trusted By
         </span>
-        <div className="flex items-center gap-1.5 text-xs font-medium text-zinc-300">
+        <div className="flex whitespace-nowrap items-center gap-1.5 text-xs font-medium text-zinc-300">
           {clients.map((client, i) => (
             <React.Fragment key={client}>
-              <span className="hover:text-white transition-colors duration-200">
+              <span className="hover:text-white transition-colors duration-200 text-[10px] sm:text-[12px] md:text-[14px]">
                 {client}
               </span>
               {i < clients.length - 1 && (

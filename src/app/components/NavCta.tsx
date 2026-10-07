@@ -27,7 +27,7 @@ const NavCta = () => {
       <motion.div
         initial="initial"
         whileHover="hover"
-        className="  relative cursor-pointer z-10 flex h-10 w-43 items-center justify-between overflow-visible rounded-full border border-white/10 bg-black transition-all hover:bg-white/80"
+        className=" sm:left-0   xs:scale-80 sm:scale-100 relative cursor-pointer z-10 flex h-10 w-43 items-center justify-between overflow-visible rounded-full border border-white/10 bg-black transition-all hover:bg-white/80"
       >
         {/* Avatar & Badge */}
         <motion.div className="relative -left-1 flex h-fit w-fit items-center overflow-visible">

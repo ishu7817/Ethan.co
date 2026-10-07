@@ -68,7 +68,7 @@ export default function Services() {
           <div
             key={card.id}
             style={{ top: 110 + index * 35 }}
-            className="relative w-full rounded-sm border border-x-0 border-t-0 border-white/40 bg-zinc-800 p-3 pt-4 pb-6 shadow-4xl transition-all duration-1000 sm:p-4 sm:pt-5 sm:pb-6 lg:sticky"
+            className="relative w-full rounded-sm border border-x-0 border-t-0 border-white/40 bg-zinc-800 p-3 pt-4 pb-6 shadow-4xl transition-all duration-1000 sm:p-4 sm:pt-5 sm:pb-6 sticky"
           >
             <div className="flex min-w-0 flex-col gap-6 lg:flex-row lg:items-start lg:gap-12">
               <div className="flex min-w-0 items-start gap-4 sm:gap-6 lg:w-[40%] lg:shrink-0">
@@ -81,17 +81,17 @@ export default function Services() {
                 </div>
 
                 <div className="flex min-w-0 items-start gap-3 text-white/90 sm:gap-4">
-                  <span className="shrink-0 text-lg font-bold sm:text-xl md:text-2xl">
+                  <span className=" hidden xss:block shrink-0 text-lg font-bold sm:text-xl md:text-2xl">
                     {card.id}
                   </span>
-                  <h3 className="min-w-0 break-words text-lg font-bold tracking-tight sm:text-xl md:text-2xl">
+                  <h3 className="min-w-0 break-words text-lg font-bold tracking-tight xss:text-2xl md:text-2xl">
                     {card.title}
                   </h3>
                 </div>
               </div>
 
               <div className="flex min-w-0 flex-col items-start gap-4 text-white/80 sm:gap-6 lg:flex-1">
-                <h4 className="w-full break-words text-xl font-medium tracking-tight sm:text-2xl md:text-3xl">
+                <h4 className="w-full break-words text-lg font-medium tracking-tight sm:text-2xl md:text-3xl">
                   {card.heading}
                 </h4>
 
@@ -99,7 +99,7 @@ export default function Services() {
                   {card.tags.map((tag, i) => (
                     <span
                       key={i}
-                      className="rounded-md bg-zinc-700/90 px-3 py-1.5 text-xs sm:text-sm"
+                      className="rounded-md  bg-zinc-700/90 px-3 py-1.5 text-xs sm:text-sm"
                     >
                       {tag}
                     </span>

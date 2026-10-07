@@ -16,17 +16,14 @@ const Navbar = () => {
         });
       };
   return (
-    <div className=' font-chillax relative z-50 flex justify-center items-center lg:block'>
+    <div className=' group font-chillax relative z-50 flex justify-center items-center lg:block'>
             <nav className="fixed left-1/2 top-4 z-50 flex h-20 w-[calc(100%_-_2rem)] max-w-6xl -translate-x-1/2 items-center justify-between rounded-2xl border border-white/5 bg-[#343434]/80 px-3 py-3 backdrop-blur-md sm:top-6 sm:w-[95%] xl:left-auto xl:mx-auto xl:w-[60%] xl:translate-x-0">
-        <div className="flex shrink-0 items-center gap-2 font-bold text-lg tracking-tight">
-          <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
-            <path d="M21 4L3 12l18 8-4-8 4-8z" />
-          </svg>
+        <div className=" group-hover:hidden xs:group-hover:flex flex shrink-0 items-center gap-2 font-bold text-2xl xs:text-lg md:text-2xl tracking-tight">
           Ethan
         </div>
 
         <ul
-        className="hidden items-center gap-4 text-sm font-medium text-gray-300 md:flex lg:gap-10">
+        className="hidden xs:flex items-center justify-between gap-6 sm:gap-14 text-sm font-medium text-gray-300  ">
         {navlinks.map((text, i)=>(
           <li 
           key={i} 
@@ -37,8 +34,10 @@ const Navbar = () => {
 
 ))}
 </ul>
-
+<div className=''>
+  
 <NavCta/>
+</div>
       
       </nav>
 

@@ -6,6 +6,15 @@ import { motion } from "framer-motion";
 import ParallaxLayer from "./Paralax";
 
 export default function Contact() {
+ 
+  const [copied, setCopied] = useState(false);
+  const email = "hello@nafae.co";
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1000);
+  };
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -122,23 +131,24 @@ export default function Contact() {
           <div className="pt-6 border-t border-white/10 flex flex-col w-full justify-baseline gap-2">
             <span className="text-sm font-semibold text-white ">Contact</span>
 
-            <motion.div className="flex h-fit w-full flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <motion.span
+            <motion.div className="flex h-fit w-full flex-col items-start gap-4 xss:flex-row sm:items-center xss:justify-between">
+            <motion.a
                  initial={{ y:"100%", opacity:0 }}
           whileInView={{ y:0, opacity:1 }}
           viewport={{ once: true }}
           transition= {{ duration: 0.8, ease: [0.16, 1, 0.3, 1]}}
 
-                  className="w-fit text-base text-white/80 md:text-lg"
+                  onClick={handleCopy}
+                  className={`text-white/80 cursor-pointer hover:text-white ${copied ? "font-array text-xs" : "underline"} duration-150 underline-offset-4 transition-colors w-fit text-base md:text-lg`}
                 >
-                  Working remotely worldwide
-                </motion.span>
+                  {copied ? "Copied!" : "ethancole0976@gmail.com"}
+                </motion.a>
               <motion.div
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
-                className="flex w-full flex-wrap items-baseline justify-start gap-x-6 gap-y-2 pt-1 sm:w-auto sm:justify-end md:gap-10"
+                className="flex w-full flex-wrap items-baseline justify-start gap-x-6 gap-y-2 pt-1 xss:w-auto xss:justify-end md:gap-10"
               >
                 
                 <motion.a

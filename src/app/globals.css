@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+
+
+@theme {
+
+  --breakpoint-mobile: 320px;
+  --breakpoint-xss: 475px;
+  --breakpoint-xs: 600;
+  --breakpoint-3xl: 1600px;
+}
+
+
 @theme {
   --font-array: "Array", sans-serif;
   --font-chillax: "Chillax", sans-serif;
