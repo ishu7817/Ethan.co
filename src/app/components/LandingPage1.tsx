@@ -14,7 +14,7 @@ const LandingPage1 = () => {
           className="  mt-[22vh] md:mt-[18vh] flex items-center justify-center   pointer-events-none z-0 selection:bg-transparent"
         >
          <motion.div className="relative min-w-screen min-w-0 max-h-fit">
-          <h1 className="relative z-10 sm:whitespace-nowrap text-center font-clash text-[clamp(1.5rem,10vw,10.5vw)] font-extrabold uppercase leading-none tracking-tight text-[#09090B]/90 select-none">
+          <h1 className="relative z-10 mx-auto max-w-6xl text-center font-clash text-[clamp(1.5rem,6vw,6.5vw)] font-extrabold uppercase leading-[0.98] tracking-tight text-[#09090B]/90 select-none">
  <motion.div
         // animate={{
         //   y: ["40%"],
@@ -30,7 +30,7 @@ const LandingPage1 = () => {
           willChange: "transform",
         }}
       />
-            Motion Designer
+            Launch and product explainer videos 
           </h1>
         </motion.div>
 
@@ -43,7 +43,7 @@ const LandingPage1 = () => {
             initial={{ y: 25, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-0 flex flex-col-reverse items-start gap-5 xs:flex-row xss:items-center xs:justify-between"
+            className="mt-0 flex flex-col-reverse items-start gap-5  xss:items-center xs:justify-between"
           >
             
                         <div className="w-full xss:w-auto">

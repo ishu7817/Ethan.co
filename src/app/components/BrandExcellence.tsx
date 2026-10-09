@@ -34,7 +34,7 @@ const BrandExcellence = () => {
 
             <div>
               <h3 className=" text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2">
-                5-14
+                8-14
               </h3>
               <p className="text-[11px] md:text-xs text-gray-400  uppercase tracking-wider">
                 AVERAGE TURNAROUND (DAYS)
@@ -43,7 +43,7 @@ const BrandExcellence = () => {
 
             <div>
               <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-2">
-                4-5
+                2
               </h3>
               <p className="text-[11px] md:text-xs text-gray-400  uppercase tracking-wider">
                 REVISIONS INCLUDED
