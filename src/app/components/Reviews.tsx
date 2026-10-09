@@ -4,7 +4,7 @@ import React from 'react';
 const clients = [
   { name: 'Stan Browney', href: 'https://www.youtube.com/Browney' },
   { name: 'Cody Hamilton', href: 'https://x.com/CodyHamiltonyt' },
-  { name: 'Ayush Garg', href: 'https://x.com/ayushgarg' },
+  { name: 'Ayush Garg', href: 'https://x.com/_ayushgarg_' },
 ];
 
 export default function Reviews() {
